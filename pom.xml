@@ -46,10 +46,17 @@
 			<artifactId>httpclient</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>com.oracle</groupId> -->
+		<!-- <artifactId>ojdbc7</artifactId> -->
+		<!-- <version>12.1.0</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc7</artifactId>
 			<version>12.1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/ojdbc7-12.1.0.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>commons-dbcp</groupId>
