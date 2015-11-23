@@ -1,4 +1,11 @@
-FROM maven:3.2-jdk-7-onbuild
-#CMD wget http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar
-#CMD mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0 -Dpackaging=jar -Dfile=ojdbc7.jar -DgeneratePom=true
-CMD java -jar spring-session-ui-0.0.1-SNAPSHOT.war
+FROM maven:3-jdk-8
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+ONBUILD ADD . /usr/src/app
+
+ONBUILD RUN mvn package
+
+CMD java -jar target/spring-session-ui-0.0.1-SNAPSHOT.war
+
