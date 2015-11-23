@@ -1,0 +1,4 @@
+environments:
+  redis:
+    host: 52.76.146.244
+    port: 22121
