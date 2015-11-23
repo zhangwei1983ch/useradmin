@@ -195,6 +195,7 @@ public class UiApplication {
 		} catch (UnknownHostException e) {
 		}
 		mv.addObject("hostName", hostName);
+                mv.addObject("dummy", "dummy");
 		return mv;
 	}
 
