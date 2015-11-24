@@ -3,5 +3,6 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 ADD . /usr/src/app
 RUN mvn package
-ENTRYPOINT [ "java", "-jar", "target/spring-session-ui-0.0.1-SNAPSHOT.war"]
+RUN mv target/spring-session-ui-0.0.1-SNAPSHOT.war /usr/src/spring-session-ui-0.0.1-SNAPSHOT.war
+ENTRYPOINT [ "java", "-jar", "/usr/src/spring-session-ui-0.0.1-SNAPSHOT.war"]
 
