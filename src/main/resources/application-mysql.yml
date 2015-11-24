@@ -1,11 +1,12 @@
 spring:
   datasource:
-    driverClass: com.mysql.jdbc.Driver  
-    url: jdbc:mysql://127.0.0.1:3306/local-kaishustory?useUnicode=true&characterEncoding=utf-8  
-    username: root  
-    password: root  
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/main?useUnicode=true&characterEncoding=utf-8
+    username: admin  
+    password: admin
   jpa:
     show-sql: true
+    dialect: org.hibernate.dialect.MySQLInnoDBDialect
 
 server:
   context-path: /redisdemo
@@ -15,3 +16,7 @@ environments:
   redis:
    host: 52.76.146.244
    port: 8000
+
+logging:
+  level:
+    org.springframework.security: 'DEBUG'

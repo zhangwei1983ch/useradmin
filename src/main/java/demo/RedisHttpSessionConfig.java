@@ -20,7 +20,10 @@ public class RedisHttpSessionConfig {
 		factory.setHostName(this.setting.getHost());
 		factory.setPort(this.setting.getPort());
 		factory.setUsePool(true);
-		factory.setPassword(this.setting.getPassword());
+		if (this.setting.getPassword() != null
+				&& !this.setting.getPassword().isEmpty()) {
+			factory.setPassword(this.setting.getPassword());
+		}
 		return factory;
 	}
 }

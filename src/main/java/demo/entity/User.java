@@ -15,9 +15,11 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 @Entity(name = "USERS")
 public class User implements Serializable {
+	// @GeneratedValue(strategy = GenerationType.SEQUENCE, generator =
+	// "user_seq")
+	// @SequenceGenerator(name = "user_seq", sequenceName = "seq_user")
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
-	@SequenceGenerator(name = "user_seq", sequenceName = "seq_user")
+	@GeneratedValue
 	private Long id;
 	private String username;
 	private String password;

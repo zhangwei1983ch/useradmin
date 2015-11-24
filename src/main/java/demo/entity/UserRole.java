@@ -9,9 +9,11 @@ import javax.persistence.SequenceGenerator;
 
 @Entity(name = "authorities")
 public class UserRole {
+	// @GeneratedValue(strategy = GenerationType.SEQUENCE, generator =
+	// "user_seq")
+	// @SequenceGenerator(name = "user_seq", sequenceName = "seq_user")
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
-	@SequenceGenerator(name = "user_seq", sequenceName = "seq_user")
+	@GeneratedValue
 	private Long id;
 
 	private String username;
