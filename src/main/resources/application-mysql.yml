@@ -10,7 +10,7 @@ spring:
 
 server:
   context-path: /redisdemo
-  port: 9000
+  port: 80
 
 environments:
   redis:
