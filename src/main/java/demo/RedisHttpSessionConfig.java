@@ -14,15 +14,13 @@ public class RedisHttpSessionConfig {
 	@Autowired
 	private RedisSettings setting;
 
-	private String host;
-	private int port;
-
 	@Bean
 	public JedisConnectionFactory connectionFactory() throws Exception {
 		JedisConnectionFactory factory = new JedisConnectionFactory();
 		factory.setHostName(this.setting.getHost());
 		factory.setPort(this.setting.getPort());
 		factory.setUsePool(true);
+		factory.setPassword(this.setting.getPassword());
 		return factory;
 	}
 }
