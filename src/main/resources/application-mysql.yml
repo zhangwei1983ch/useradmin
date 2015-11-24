@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClass: com.mysql.jdbc.Driver  
+    url: jdbc:mysql://127.0.0.1:3306/local-kaishustory?useUnicode=true&characterEncoding=utf-8  
+    username: root  
+    password: root  
+  jpa:
+    show-sql: true
+
+server:
+  context-path: /redisdemo
+  port: 9000
+
+environments:
+  redis:
+   host: 52.76.146.244
+   port: 8000
